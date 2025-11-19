@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlySabores - Doces & Salgados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <img src="images/logo-alysabores.png" alt="AlySabores Logo" class="logo">
+                <div class="brand-text">
+                    <h1>AlySabores</h1>
+                    <p>Doces & Salgados</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <button class="cart-btn" onclick="toggleCart()">🛒 Carrinho</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/delicious-pastries-cupcakes-desserts.jpg" alt="Doces e Salgados" class="hero-img">
+        <div class="hero-content">
+            <h2>Bem-vindo à AlySabores</h2>
+            <p>Doces e Salgados artesanais feitos com amor</p>
+            <button class="cta-btn" onclick="document.getElementById('produtos').scrollIntoView({behavior: 'smooth'})">Ver Produtos</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma pequena confeitaria caseira, dedicada a criar as melhores combinações de doces e salgados com qualidade. Cada produto é feito com ingredientes selecionados e muito carinho.</p>
+            <div class="about-features">
+                <div class="feature">✓ Ingredientes Selecionados</div>
+                <div class="feature">✓ Receitas Caseiras</div>
+                <div class="feature">✓ Feito com Amor</div>
+            </div>
+            <p class="about-quote">Acreditamos que comida feita com amor faz toda a diferença</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+
+            <!-- Salgados -->
+            <div class="category">
+                <h3>Salgados</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/empada-frango.jpg" alt="Empada de Frango">
+                        <h4>Empada de Frango</h4>
+                        <p>Empada crocante recheada com frango desfiado</p>
+                        <div class="price">R$ 12,00</div>
+                        <button onclick="addToCart('Empada de Frango', 12)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/torta-salgada.jpg" alt="Torta Salgada">
+                        <h4>Torta Salgada</h4>
+                        <p>Torta caseira com frango desfiado e queijo derretido</p>
+                        <div class="price">R$ 28,00</div>
+                        <button onclick="addToCart('Torta Salgada', 28)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/pasteis.jpg" alt="Pastéis">
+                        <h4>Pastéis</h4>
+                        <p>Pastéis crocantes e dourados</p>
+                        <div class="price">R$ 8,00</div>
+                        <button onclick="addToCart('Pastéis', 8)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/folheados.jpg" alt="Folheados">
+                        <h4>Folheados</h4>
+                        <p>Folheados com presunto, queijo e ervas</p>
+                        <div class="price">R$ 10,00</div>
+                        <button onclick="addToCart('Folheados', 10)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doces -->
+            <div class="category">
+                <h3>Doces</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/pudim.jpg" alt="Pudim">
+                        <h4>Pudim</h4>
+                        <p>Pudim cremoso com calda de caramelo</p>
+                        <div class="price">R$ 15,00</div>
+                        <button onclick="addToCart('Pudim', 15)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/bolo-cenoura.jpg" alt="Bolo de Cenoura">
+                        <h4>Bolo de Cenoura</h4>
+                        <p>Bolo fofinho de cenoura com cobertura de chocolate</p>
+                        <div class="price">R$ 35,00 (inteiro) / R$ 6,50 (fatia)</div>
+                        <button onclick="addToCart('Bolo de Cenoura - Fatia', 6.50)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/brigadeiro.jpg" alt="Brigadeiro">
+                        <h4>Brigadeiro</h4>
+                        <p>Brigadeiro de chocolate caseiro</p>
+                        <div class="price">R$ 20,00</div>
+                        <button onclick="addToCart('Brigadeiro', 20)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/donut.jpg" alt="Donut">
+                        <h4>Donut</h4>
+                        <p>Donuts frescos com cobertura</p>
+                        <div class="price">R$ 9,00</div>
+                        <button onclick="addToCart('Donut', 9)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="category">
+                <h3>Bebidas</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="images/agua.jpg" alt="Água">
+                        <h4>Água</h4>
+                        <p>Água fresca</p>
+                        <div class="price">R$ 2,50</div>
+                        <button onclick="addToCart('Água', 2.50)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/refrigerante.jpg" alt="Refrigerante">
+                        <h4>Refrigerante</h4>
+                        <p>Refrigerante gelado para acompanhar seus salgados</p>
+                        <div class="price">R$ 5,00</div>
+                        <button onclick="addToCart('Refrigerante', 5)">Adicionar ao Carrinho</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/cafe.jpg" alt="Café">
+                        <h4>Café</h4>
+                        <p>Café coado quente para acompanhar seus salgados</p>
+                        <div class="price">R$ 4,50</div>
+                        <button onclick="addToCart('Café', 4.50)">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Localização: São Vicente/RN</p>
+            <p>WhatsApp: <a href="https://wa.me/5584996418357" target="_blank">(84) 99641-8357</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AlySabores - Doces & Salgados. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Carrinho de Compras</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
